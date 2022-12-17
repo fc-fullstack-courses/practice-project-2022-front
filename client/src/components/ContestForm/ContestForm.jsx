@@ -179,4 +179,3 @@ const mapDispatchToProps = (dispatch) => ({
 export default withRouter(
   connect(mapStateToProps, mapDispatchToProps)(ContestForm)
 );
-//test for Fork creation

@@ -52,6 +52,7 @@
           display: flex
           justify-content: flex-start
           align-items: center
+          text-transform: uppercase
           @media(max-width: 920px)
             padding: 0
           @media(max-width: 700px)
@@ -91,7 +92,7 @@
               margin: 0
               width: 160px
               display: none
-
+              
               .last
                 width: 100%
                 padding-top: 8px
@@ -101,10 +102,10 @@
               li
                 box-sizing: border-box
                 width: 100%
-                padding: 10px 15px
+                
                 display: flex
                 justify-content: flex-start
-
+                text-transform: lowercase
                 &:hover
                   background: #f9fafb
 
@@ -112,7 +113,9 @@
                   font-size: 12px
                   text-decoration: none
                   color: #333
-
+                  width: 100%
+                  padding: 10px 15px
+                  
                   &:hover
                     color: #f27e51
 
@@ -202,7 +205,12 @@
         font-weight: 400
         font-size: 14px
         border-right: 1px solid #ebebeb
-
+        
+      button
+        padding: 0
+        border: none
+        background-color: inherit
+        
     .numberContainer
       text-decoration: none
       color: inherit
@@ -251,4 +259,3 @@
       letter-spacing: 0.3px
       color: lightyellow
       text-decoration: underline
-
