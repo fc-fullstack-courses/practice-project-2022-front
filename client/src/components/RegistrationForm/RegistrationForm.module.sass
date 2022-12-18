@@ -105,26 +105,18 @@
       width: auto
 
     .inputContainer
-      display: flex
-      flex-direction: column
-      justify-content: center
-      align-self: flex-start
+      position: relative
       margin-right: 20px
       margin-left: 20px
-      flex: 1 1
 
       .fieldWarning
+        position: absolute
+        top: 0.2em
+        left: 0.4em
+        width: fit-content
         font-size: 15px
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
-        color: white
-        border: 1px solid #b72522
-        margin-bottom: 15px
-        padding-bottom: 5px
-        padding-top: 5px
-        text-align: center
+        color: #b72522
+        text-align: left
 
     .input
       background-color: white
