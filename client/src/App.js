@@ -50,30 +50,24 @@ class App extends Component {
             path="/startContest"
             component={StartContestPage}
           />
-          <Route
-            exact
-            path='/startContest/nameContest'
-            component={PrivateHoc(ContestCreationPage, {
-              contestType: CONSTANTS.NAME_CONTEST,
-              title: 'Company Name',
-            })}
-          />
-          <Route
-            exact
-            path='/startContest/taglineContest'
-            component={PrivateHoc(ContestCreationPage, {
-              contestType: CONSTANTS.TAGLINE_CONTEST,
-              title: 'TAGLINE',
-            })}
-          />
-          <Route
-            exact
-            path='/startContest/logoContest'
-            component={PrivateHoc(ContestCreationPage, {
-              contestType: CONSTANTS.LOGO_CONTEST,
-              title: 'LOGO',
-            })}
-          />
+          <PrivateRoute exact path="/startContest/nameContest">
+            <ContestCreationPage
+              contestType={CONSTANTS.NAME_CONTEST}
+              title="Company Name"
+            />
+          </PrivateRoute>
+          <PrivateRoute exact path="/startContest/taglineContest">
+            <ContestCreationPage
+              contestType={CONSTANTS.TAGLINE_CONTEST}
+              title="TAGLINE"
+            />
+          </PrivateRoute>
+          <PrivateRoute exact path="/startContest/logoContest">
+            <ContestCreationPage
+              contestType={CONSTANTS.LOGO_CONTEST}
+              title="LOGO"
+            />
+          </PrivateRoute>
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute exact path="/contest/:id" component={ContestPage} />
           <PrivateRoute exact path="/account" component={UserProfile} />
