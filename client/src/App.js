@@ -18,6 +18,7 @@ import ContestCreationPage from './pages/ContestCreation/ContestCreationPage';
 import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
+import PrivateRoute from 'components/Routes/PrivateRoute/PrivateRoute';
 import PublicOnlyRoute from 'components/Routes/PublicOnlyRoute/PublicOnlyRoute';
 
 class App extends Component {
@@ -25,7 +26,7 @@ class App extends Component {
     return (
       <Router history={browserHistory}>
         <ToastContainer
-          position='top-center'
+          position="top-center"
           autoClose={5000}
           hideProgressBar
           newestOnTop={false}
@@ -36,22 +37,18 @@ class App extends Component {
           pauseOnHover
         />
         <Switch>
-          <Route exact path='/' component={Home} />
-          <PublicOnlyRoute
-            exact
-            path="/login"
-            component={LoginPage}
-          />
+          <Route exact path="/" component={Home} />
+          <PublicOnlyRoute exact path="/login" component={LoginPage} />
           <PublicOnlyRoute
             exact
             path="/registration"
             component={RegistrationPage}
           />
-          <Route exact path='/payment' component={PrivateHoc(Payment)} />
-          <Route
+          <PrivateRoute exact path="/payment" component={Payment} />
+          <PrivateRoute
             exact
-            path='/startContest'
-            component={PrivateHoc(StartContestPage)}
+            path="/startContest"
+            component={StartContestPage}
           />
           <Route
             exact
@@ -77,13 +74,9 @@ class App extends Component {
               title: 'LOGO',
             })}
           />
-          <Route exact path='/dashboard' component={PrivateHoc(Dashboard)} />
-          <Route
-            exact
-            path='/contest/:id'
-            component={PrivateHoc(ContestPage)}
-          />
-          <Route exact path='/account' component={PrivateHoc(UserProfile)} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+          <PrivateRoute exact path="/contest/:id" component={ContestPage} />
+          <PrivateRoute exact path="/account" component={UserProfile} />
           <Route component={NotFound} />
         </Switch>
         <ChatContainer />
