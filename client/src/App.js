@@ -18,9 +18,10 @@ import ContestCreationPage from './pages/ContestCreation/ContestCreationPage';
 import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
+import PublicOnlyRoute from 'components/Routes/PublicOnlyRoute/PublicOnlyRoute';
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <Router history={browserHistory}>
         <ToastContainer
@@ -36,15 +37,15 @@ class App extends Component {
         />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route
+          <PublicOnlyRoute
             exact
-            path='/login'
-            component={OnlyNotAuthorizedUserHoc(LoginPage)}
+            path="/login"
+            component={LoginPage}
           />
-          <Route
+          <PublicOnlyRoute
             exact
-            path='/registration'
-            component={OnlyNotAuthorizedUserHoc(RegistrationPage)}
+            path="/registration"
+            component={RegistrationPage}
           />
           <Route exact path='/payment' component={PrivateHoc(Payment)} />
           <Route
