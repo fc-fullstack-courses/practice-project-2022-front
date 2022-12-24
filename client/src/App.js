@@ -19,6 +19,8 @@ import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
 
+import PricingPage from './pages/PricingPage/PricingPage';
+
 class App extends Component {
   render () {
     return (
@@ -83,6 +85,7 @@ class App extends Component {
             component={PrivateHoc(ContestPage)}
           />
           <Route exact path='/account' component={PrivateHoc(UserProfile)} />
+          <Route exact path='/squadhelp-pricing' component={PrivateHoc(PricingPage)} />
           <Route component={NotFound} />
         </Switch>
         <ChatContainer />
