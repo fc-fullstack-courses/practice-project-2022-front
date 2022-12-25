@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPriceCategories } from 'store/slices/pricingSlice';
 import PricingBox from './PricingBox/PricingBox';
+import styles from './Pricing.module.sass'
 
 const Pricing = () => {
 
@@ -16,9 +17,12 @@ const Pricing = () => {
         (<PricingBox key={cat.id} category={cat}/>)
     );
     return (
-        <div>
-            {pricingCategories}
-        </div>
+        <section className={styles.pricingForMain}>
+            <div className={styles.pricingContainer}>
+                {pricingCategories}
+            </div>
+        </section>
+        
     );
 }
 

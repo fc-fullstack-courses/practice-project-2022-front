@@ -1,9 +1,12 @@
 import React from 'react';
+import styles from './PricingElementOptionDetail.module.sass'
 
 const PricingElementOptionDetail = ({name}) => {
     return (
         <p>
-            {name}
+            <i className={styles.fa}>
+                {name}
+            </i>
         </p>
     );
 }

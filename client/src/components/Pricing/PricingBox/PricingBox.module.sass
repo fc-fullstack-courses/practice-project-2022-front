@@ -1,0 +1,95 @@
+$bronze-color: #e0b48d
+$gold-color: #e8b954
+$platinum-color: #555
+$managed-color: #28d2d0
+
+.pricingBox
+    padding: 60px 15px
+    flex: 1
+
+    h3
+        font-size: 33px
+        margin-top: 0
+        font-weight: 700
+
+    ul li
+        font-size: 15px
+        font-weight: 500
+        padding: 13px 0
+        border-bottom: 2px solid #ddd
+
+    p
+        padding: 13px 15px
+    
+ 
+.noBorderBottom 
+    border-bottom: none!important
+       
+.topBox
+    box-sizing: border-box
+    opacity: .9
+    border: 10px solid #eee
+    padding: 16px
+    margin-bottom: 15px
+    display: inline-block
+    width: 100%
+    min-height: 215px
+    background-color: #fff
+
+    p
+        color: #666
+        font-size: 16px
+        font-weight: 500
+        min-height: 75px
+        margin: 0
+
+    span
+        float: right
+        font-size: 28px
+        font-weight: 600
+        font-family: 'Raleway',sans-serif
+    &:hover
+        box-shadow: 0px 0px 0px rgba(0,0,0,0.25), 0px 2px 4px rgba(0,0,0,0.25), 0px 8px 16px rgba(0,0,0,0.5), 0px 2px 4px rgba(0,0,0,0.25)
+
+.pricingBoxBtn
+    width: 100%
+    border: none
+    font-weight: 700
+    font-size: 17px
+    line-height: 45px
+    border-radius: 5px
+    color: #fff
+    &::before 
+        content: "\f00c"
+
+.bronze
+    .topBox
+        border-color: $bronze-color
+        span
+            color: $bronze-color
+    button
+        background-color: $bronze-color
+        
+.gold
+    .topBox
+        border-color: $gold-color
+        span
+            color: $gold-color
+    button
+        background-color: $gold-color
+
+.platinum
+    .topBox
+        border-color: $platinum-color
+        span
+            color: $platinum-color
+    button
+        background-color: $platinum-color
+
+.managed
+    .topBox
+        border-color: $managed-color
+        span
+            color: $managed-color
+    button
+        background-color: $managed-color

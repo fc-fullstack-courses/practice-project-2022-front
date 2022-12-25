@@ -7,13 +7,18 @@ const pricingCategoriesData = [
         options: [
             {   
                 id: 1,
-                name: 'option1 name',
+                name: 'prize to Winner - $135 (Included)',
+                details: [],
+            },
+            {   
+                id: 2,
+                name: 'Validation Services & Upgrades ($39 value)',
                 details: [
                     {id: 1, name: 'Matching .com URL'},
                 ],
             },
             {   
-                id: 2,
+                id: 3,
                 name: 'option2 name',
                 details: [
                     {
@@ -27,7 +32,7 @@ const pricingCategoriesData = [
                 ]
             },
             { 
-                id: 3,  
+                id: 4,  
                 name: 'option3 name',
                 details: [],
             },
@@ -41,11 +46,16 @@ const pricingCategoriesData = [
         options: [
             {   
                 id: 1,
-                name: 'option1 name',
+                name: 'prize to Winner - $200 (Included)',
                 details: [],
             },
             {   
                 id: 2,
+                name: 'option1 name',
+                details: [],
+            },
+            {   
+                id: 3,
                 name: 'option2 name',
                 details: [
                     {
@@ -59,7 +69,7 @@ const pricingCategoriesData = [
                 ]
             },
             {   
-                id: 3,
+                id: 4,
                 name: 'option3 name',
                 details: [],
             },
@@ -73,11 +83,16 @@ const pricingCategoriesData = [
         options: [
             {   
                 id: 1,
-                name: 'option1 name',
+                name: 'prize to Winner - $300 (Included)',
                 details: [],
             },
             {   
                 id: 2,
+                name: 'option1 name',
+                details: [],
+            },
+            {   
+                id: 3,
                 name: 'option2 name',
                 details: [
                     {
@@ -91,7 +106,7 @@ const pricingCategoriesData = [
                 ]
             },
             {   
-                id: 3,
+                id: 4,
                 name: 'option3 name',
                 details: [],
             },
@@ -105,26 +120,7 @@ const pricingCategoriesData = [
         options: [
             {   
                 id: 1,
-                name: 'option1 name',
-                details: [],
-            },
-            {   
-                id: 2,
-                name: 'option2 name',
-                details: [
-                    {
-                        id: 1,
-                        name: 'option2 detail1 name',
-                    },
-                    {
-                        id: 2,
-                        name: 'option2 detail2 name',
-                    },
-                ]
-            },
-            {   
-                id: 3,
-                name: 'option3 name',
+                name: 'Receive optimum results from your Platinum Contest by launching a Managed Contest Package and working one-on-one with an experienced Squadhelp Branding Consultant.',
                 details: [],
             },
         ]
